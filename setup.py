@@ -12,7 +12,7 @@ setup(
     url='https://github.com/rohailn8/dsss_homework_2',  
     classifiers=[                          
         'Programming Language :: Python :: 3',
-        'License :: OSI Approved :: MIT License',
+        'License :: Apache-2.0 License',
         'Operating System :: OS Independent',
     ],
     python_requires='>=3.6',               
