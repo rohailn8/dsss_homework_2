@@ -3,7 +3,19 @@ import random
 
 def generateRandomNumber(minimumNumber: int, maximumNumber: int) -> int:
     """
-    Random integer is generated in between the numbers min and max
+    Random integer is generated in between a given range of numbers
+
+    Args: 
+        minimumNumber (int) : Minimum Integer value
+        maximumNumber (int) : Maximum Integer value
+        
+    Return:
+        int: random integer between the minimumNumber and the maximumNumber
+
+    Raises:
+        ValueError: Checks if minimumNumber and maximumNumber format is not integer.
+        ValueError: Checks if minimumNumber is not greater than maximumNumber.
+           
     """
     if not isinstance(minimumNumber, int) or not isinstance(maximumNumber, int):
         raise ValueError("Both minimumNumber and maximumNumber should be an integer")
@@ -23,17 +35,32 @@ def generateRandomOperator():
 def calculatorFunction(firstNumber: int, secondNumber: int, operator) -> int:
     """
     Function to calculate the resultant based on the firstNumber, secondNumber and the operator
+    
+    Args: 
+        firstNumber (int) : First Integer value
+        secondNumber (int) : Second Integer value
+        operator : Operator choice
+        
+    Return:
+        int: calculation of resultant between the given numbers and the generated operator
+
     """
     equation = f"{firstNumber} {operator} {secondNumber}"
     if operator == '+': 
+        # answer = firstNumber - secondNumber : Wrong logic used
         answer = firstNumber + secondNumber
     elif operator == '-': 
+        # answer = firstNumber + secondNumber : Wrong logic used
         answer = firstNumber - secondNumber
     else: 
         answer = firstNumber * secondNumber
     return equation, answer
 
 def math_quiz():
+    """
+    Function to carry out the math quiz
+    
+    """
     totalPoints = 0
     # totalQuestions = 3.14159265359. This should have been an integer
     totalQuestions = 3
